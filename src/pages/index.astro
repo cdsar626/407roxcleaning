@@ -1,0 +1,133 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Accordion, AccordionItem } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 id="reviews" class="mb-16 text-6xl">Reviews</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2">
+        <Feature icon="mdi:comment-quote-outline" title="— John Smith">
+          "I recently hired Rox Cleaning Solutions for my commercial office space and I couldn't be happier with the results. Their attention to detail and thoroughness was evident from the moment they arrived. They were able to tackle even the toughest stains and left my office looking spotless. The team was professional and efficient, completing the job in a timely manner. I highly recommend Rox Cleaning Solutions for all your commercial cleaning needs."
+        </Feature>
+        <Feature icon="mdi:comment-quote" title="— Samantha Lee">
+
+          "As a busy homeowner, I don't always have time to deep clean my house. That's where Rox Cleaning Solutions comes in. They have been my go-to for residential cleaning for years now and I am always impressed with their level of detail and dedication to making my home look its best. They are always prompt and courteous, and I trust them completely to take care of my home. I would highly recommend Rox Cleaning Solutions to anyone looking for a reliable and thorough residential cleaning service."
+        </Feature>
+        <Feature icon="mdi:comment-quote-outline" title="— David Johnson">
+
+          "I own multiple rental properties and have been using Rox Cleaning Solutions for all of my move-out cleanings. They have consistently delivered exceptional results, making the units look brand new for the next tenants. Their team is always professional and efficient, and I appreciate their attention to detail. I have never been disappointed with their services and will continue to use them for all my cleaning needs."
+        </Feature>
+        <Feature icon="mdi:comment-quote" title="— Emily Chen">
+
+          "I recently had a big event at my office and needed a thorough cleaning afterwards. Rox Cleaning Solutions was recommended to me by a colleague and I am so glad I hired them. They went above and beyond to make sure every nook and cranny was cleaned, leaving my office looking immaculate. The team was friendly and professional, and they took the time to listen to my specific cleaning requests. I couldn't have asked for a better experience and I will definitely be using Rox Cleaning Solutions for all my future cleaning needs."
+        </Feature>        
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <h2 id="services" class="mb-16 text-6xl">Services</h2>
+    <ContentMedia imgSrc="/brooming.jpg" reverseImg={true}>
+      <h2>Residential Cleaning</h2>
+      <p class="text-2xl">
+        Leave the dirty work to us! Our professional and reliable residential cleaning service will ensure that your home is spotless and sparkling. We use high-quality products and pay attention to every detail to leave your home looking and feeling fresh. Let us give you the clean house you deserve.
+      </p>
+    </ContentMedia>
+    <ContentMedia imgSrc="/cleaningcart01.jpg" >
+      <h2>Comercial Cleaning</h2>
+      <p class="text-2xl">
+        Our Commercial Cleaning services provide a comprehensive and effective solution for all your cleaning needs. From dusting and vacuuming to disinfecting and sanitizing, our team of experts ensures your space is left sparkling clean and germ-free. Trust us to maintain a spotless and healthy environment.
+      </p>
+    </ContentMedia>
+  </div>
+  
+  
+  <section id="faq" class="my-64">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div class="flex flex-col items-start gap-4">
+        <h2 class="text-6xl">FAQ</h2>
+        <p class="text-2xl">
+          Welcome to Rox Cleaning Solutions, a premier commercial and residential cleaning company serving Orlando, FL and the surrounding areas. Our team of experienced and dedicated professionals is committed to providing top-quality cleaning services that exceed our clients' expectations. We offer a wide range of customizable cleaning solutions to meet the unique needs of each client, ensuring a clean and healthy environment for homes and businesses.
+
+        </p>
+        <a class="button" href="tel:4077248676">Contact us</a>
+      </div>
+      <div class="space-content">
+        <Accordion>
+          <AccordionItem name="exclusive" title="What services does Rox Cleaning Solutions offer?" open>
+            <p>
+              
+              Rox Cleaning Solutions offers both commercial and residential cleaning services in Orlando, FL. Our services include deep cleaning, regular cleaning, move-in/out cleaning, and more.
+                    
+            </p>
+          </AccordionItem>
+          <AccordionItem name="" title="How often can I schedule cleaning services with Rox Cleaning Solutions?">
+            <p>
+              
+              You can schedule cleaning services with Rox Cleaning Solutions on a weekly, bi-weekly, or monthly basis. We also offer one-time cleaning services for special occasions.
+                    
+            </p>
+          </AccordionItem>
+          <AccordionItem name="" title="Does Rox Cleaning Solutions use eco-friendly products?">
+            <p>
+              
+              Yes, Rox Cleaning Solutions uses environmentally-friendly and non-toxic cleaning products to ensure the safety of your family and pets.
+                    
+            </p>
+          </AccordionItem>
+          <AccordionItem name="" title="What areas of Orlando, FL does Rox Cleaning Solutions serve?">
+            <p>
+              
+              Rox Cleaning Solutions serves all areas of Orlando, FL and surrounding cities. We are happy to travel to your location for cleaning services.
+                    
+            </p>
+          </AccordionItem>
+          <AccordionItem name="" title="How long does a typical cleaning session with Rox Cleaning Solutions take?">
+            <p>
+              
+              The length of a cleaning session with Rox Cleaning Solutions depends on the size of your space and the specific services requested. We will provide you with an estimated time frame before beginning the cleaning.
+                    
+            </p>
+          </AccordionItem>
+          <AccordionItem name="" title="How can I pay for cleaning services with Rox Cleaning Solutions?">
+            <p>
+
+              Rox Cleaning Solutions accepts cash, credit/debit cards, and checks as forms of payment. Payment is due at the time of service.
+                                        
+            </p>
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="mb-32 mt-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">About Us</h2>
+      <p class="text-2xl mb-16">
+        Welcome to Rox Cleaning Solutions, a premier commercial and residential cleaning company serving Orlando, FL and the surrounding areas. Our team of experienced and dedicated professionals is committed to providing top-quality cleaning services that exceed our clients' expectations. We offer a wide range of customizable cleaning solutions to meet the unique needs of each client, ensuring a clean and healthy environment for homes and businesses.
+
+      </p>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
+        <Counter count="4.9" title="Rating" sub="On Google" />
+        <Counter count="17" title="Happy" sub="Customers" />
+        <Counter count="18+" title="Months" sub="On service" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  [id]::before {
+  content: '';
+  display: block;
+  height:      80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+</style>

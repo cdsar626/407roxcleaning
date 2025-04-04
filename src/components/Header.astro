@@ -1,0 +1,78 @@
+---
+import Navigation from '../components/Navigation.astro'
+import { SkipLink } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+---
+
+<header>
+  <SkipLink />
+  <div class="nav-container">
+    <Navigation>
+      <li class="menu-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="menu-item">
+        <a href="/#reviews">Reviews</a>
+      </li>
+      <li class="menu-item">
+        <a href="/#services">Services</a>
+      </li>
+      <li class="menu-item">
+        <a href="/#faq">FAQ</a>
+      </li>
+      <li class="menu-item">
+        <a href="/#about">About Us</a>
+      </li>
+      <!-- <li class="menu-item has-dropdown">
+        <button aria-haspopup="true" aria-expanded="false">Example Pages</button>
+        <ul class="dropdown-menu">
+          <li class="submenu-item">
+            <a href="/mdx-page/">MDX Page</a>
+          </li>
+          <li class="submenu-item">
+            <a href="/markdown-page/">Markdown Page</a>
+          </li>
+          <li class="submenu-item">
+            <a href="/accessible-components">Accessible Components</a>
+          </li>
+        </ul>
+      </li> -->
+      <li class="menu-item type-icon">
+        <a href="tel:4077248676"> <Icon class="inline-block" name="ion:call-outline" /> (407) 724-8676</a>
+      </li>
+    </Navigation>
+  </div>
+  
+</header>
+
+<style lang="scss" is:global>
+  @use '../assets/scss/base/outline' as *;
+
+  header {
+    .type-icon a {
+      display: block;
+
+      [data-icon] {
+        margin-top: -4px;
+        width: 30px;
+        height: auto;
+
+        path {
+          fill: var(--action-color);
+        }
+      }
+
+      &:hover {
+        [data-icon] path {
+          fill: var(--action-color-state);
+        }
+      }
+    }
+  }
+  .nav-container {
+    background-color: rgb(167, 227, 255);
+    padding: 0px;
+    position: sticky;
+    z-index: 10;
+  }
+</style>

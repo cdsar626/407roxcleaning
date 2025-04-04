@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
+    <h2 class="text-center text-3xl md:text-5xl">Experience the convenience of professional home services!
+    </h2>
+    <a href="https://github.com/markteekman/accessible-astro-starter" class="text-center text-lg">Call now</a>
+    <p class="text-center text-lg">(407) 724-8676</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .call-to-action {
+    position: relative;
+    overflow: auto;
+    color: var(--neutral-900);
+
+  }
+  .call-to-action::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url("/cleaning01.jpg");
+    filter: blur(10px) opacity(0.5);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .call-to-action a:not(button),
+  .call-to-action a:not(button):visited {
+    padding: 1rem;
+    color: var(--neutral-900);
+    font-weight: bold;
+    border: 3px solid var(--neutral-900);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+    &:where(:hover, :focus) {
+      color: var(--neutral-100);
+      background-color: var(--neutral-900);
+      text-decoration: underline;
+    }
+  }
+</style>

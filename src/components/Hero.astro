@@ -1,0 +1,63 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { src = '/407logo.png' } = Astro.props
+---
+
+<section class="hero my-24">
+  <video autoplay muted loop id="myVideo">
+    <source src="/3-cleaningf8f9.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start z-10">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+          <slot><span class="text-gradient">407RoxCleaning</span> </slot>
+        </h1>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href="#services">
+            <Icon name="ion:star-outline" />
+            Services
+          </a>
+          <a class="button has-icon color-secondary" href="tel:4077248676">
+            <Icon name="ion:bookmark-outline" />
+            Schedule Now
+          </a>
+        </div>
+      </div>
+      <img class="hidden md:block z-auto" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero {
+    overflow: hidden;
+  }
+  
+  #myVideo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
